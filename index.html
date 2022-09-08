@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortner</title>
+  </head>
+  <body class="
+  font-primary
+  mx-auto
+  ">
+    <nav class="
+    mx-auto
+    p-4
+    ">
+      <div class="
+      container
+      flex
+      justify-between
+      items-center
+      mx-auto
+      z-50
+      ">
+
+        <a class="
+        lg:absolute
+        lg:left-1/2
+        lg:-translate-x-1/2
+        lg:top-9
+        z-50
+        hover:opacity-75
+        transition-opacity
+        " href="/" aria-label="Go to homepage">
+          <img src="/images/logo.svg" width="150" alt="Logo">
+        </a>
+        
+        <button class="
+        lg:hidden
+        hover:opacity-50
+        " id="openMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+
+        <button class="
+        hidden
+        lg:hidden
+        hover:opacity-50
+        " id="closeMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>          
+        </button>
+
+
+        <div class="
+        bg-white
+        hidden
+        flex-col
+        gap-4
+        absolute
+        right-0
+        left-0
+        top-16
+        p-4
+        items-center
+        text-center
+        shadow-xl
+        lg:shadow-none
+        lg:flex
+        lg:flex-row
+        lg:static
+        lg:justify-between
+        lg:w-full
+        " role="menuBar">
+        
+        <a class="
+        text-lg
+        lg:text-xl
+        border-b-2
+        mx-4
+        border-white
+        hover:border-neutral-900
+        text-neutral-500
+        hover:text-neutral-900
+        transition-all
+        " href="/">Features</a>
+        
+        <a class="
+        text-lg
+        lg:text-xl
+        border-b-2
+        mx-4
+        border-white
+        hover:border-neutral-900
+        text-neutral-500
+        hover:text-neutral-900
+        transition-all
+        " href="/">Pricing</a>
+        
+        <a class="
+        text-lg
+        lg:text-xl
+        border-b-2
+        mx-4
+        lg:mr-auto
+        border-white
+        hover:border-neutral-900
+        text-neutral-500
+        hover:text-neutral-900
+        transition-all
+        " href="/">Resources</a>
+        
+        <a class="
+        text-lg
+        lg:text-xl
+        border-b-2
+        lg:mr-4
+        border-white
+        hover:border-neutral-900
+        text-neutral-500
+        hover:text-neutral-900
+        transition-all
+        " href="/">Login</a>
+        
+        <a class="
+        text-lg
+        lg:text-xl
+        mx-4
+        text-white
+        bg-primary-cyan
+        px-4
+        py-2
+        rounded-full
+        hover:text-primary-cyan
+        hover:bg-white
+        hover:shadow-md
+        transition-all
+        " href="/">Sign Up</a>
+        
+        </div>
+
+      </div>
+    </nav>
+
+    <main>
+
+      <header>
+        <!-- * section 1 -->
+        <section role="header">
+
+          <h1 class="sr-only text-center">Header</h1>
+
+          <div class="
+          p-6
+          py-8
+          gap-6
+          mx-auto
+          flex
+          flex-col
+          items-center
+          text-center
+          lg:flex-row-reverse
+          lg:justify-evenly
+          lg:gap-12
+          ">
+            <img src="/images/illustration-working.svg" class="lg:w-[600px]" alt="illustration">
+            
+            <div class="
+            flex
+            flex-col
+            items-center
+            gap-4
+            lg:items-start
+            ">
+
+              <h2 class="
+              text-center
+              text-4xl
+              font-bold
+              lg:text-6xl
+              lg:max-w-[15ch]
+              lg:text-left
+              ">More than just shorter links</h2>
+              
+              <p class="
+              text-center
+              text-lg
+              text-neutral-500
+              max-w-[50ch]
+              lg:text-xl
+              lg:text-left
+              lg:max-w-[30ch]
+              ">Build your brand’s recognition and get detailed insights 
+              on how your links are performing.</p>
+
+              <a class="
+              text-lg
+              lg:text-xl
+              text-white
+              bg-primary-cyan
+              px-12
+              py-2
+              rounded-full
+              hover:text-primary-cyan
+              hover:bg-white
+              hover:shadow-lg
+              transition-all
+              " href="/">Get Started</a>
+
+            </div>
+
+          </div>
+
+        </section>
+      </header>
+
+        <!-- * section 2 -->
+        <section role="apiArea">
+
+          <h1 class="sr-only text-center">API Area</h1>
+
+          <div class="
+          bg-gradient-to-b
+          from-white
+          to-neutral-100
+          p-4
+          md:p-6
+          lg:p-12
+          flex 
+          flex-col 
+          ">
+
+            <div class="
+            flex
+            flex-col
+            gap-4
+            lg:gap-8
+            lg:flex-row
+            lg:justify-evenly
+            bg-primary-violet 
+            rounded-lg
+            p-8
+            ">
+
+              <input type="url" class="
+              flex
+              flex-1
+              text-primary-cyan
+              p-4
+              rounded-lg
+              lg:text-lg
+              placeholder-neutral-300
+              " placeholder="Shorten a link here...">
+
+              <a class="
+              p-4
+              px-8
+              text-center
+              bg-primary-cyan
+              text-white
+              font-normal
+              text-lg
+              rounded-md
+              hover:opacity-80
+              transition-opacity
+              " href="/">Shorten it!</a>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- * section 3 -->
+        <section role="stats">
+
+          <h1 class="sr-only text-center">Advance Stats</h1>
+
+          <div class="
+          bg-neutral-100
+          p-6
+          py-8
+          gap-4
+          mx-auto
+          flex
+          flex-col
+          items-center
+          text-center
+          ">
+            
+            <div class="
+            flex
+            flex-col
+            items-center
+            gap-4
+            ">
+
+              <h2 class="
+              text-center
+              text-4xl
+              font-bold
+              ">Advance Statistics</h2>
+              
+              <p class="
+              lg:text-lg
+              text-neutral-500
+              max-w-[40ch]
+              ">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+            </div>
+
+            <!-- boxes div -->
+            <div class="
+            flex
+            flex-col
+            gap-12
+            items-center
+            mx-auto
+            py-8
+            lg:flex-row
+            ">
+
+              <!-- box1 -->
+              <div class="
+              relative
+              bg-white
+              rounded-md
+              px-4
+              py-8
+              flex
+              flex-col
+              items-center
+              text-center
+              transition-all
+              hover:scale-105
+              ">
+
+                <img class="
+                absolute
+                -top-10
+                lg:left-12
+                bg-primary-violet
+                rounded-full
+                p-4
+                " src="/images/icon-brand-recognition.svg" alt="Brand Recognition">
+
+                <h2 class="
+                font-semibold
+                text-neutral-900
+                text-2xl
+                py-8
+                ">Brand Recognition</h2>
+                
+                <p class="text-neutral-500 max-w-[40ch]">Boost your brand recognition with each click. Generic links don’t 
+                  mean a thing. Branded links help instil confidence in your content.</p>
+
+              </div>
+
+              <!-- box2 -->
+              <div class="
+              relative
+              bg-white
+              rounded-md
+              px-4
+              py-8
+              flex
+              flex-col
+              items-center
+              text-center
+              transition-all
+              hover:scale-105
+              lg:mt-[3rem]
+              ">
+                <img class="
+                absolute
+                -top-10
+                lg:left-12
+                bg-primary-violet
+                rounded-full
+                p-4
+                " src="/images/icon-detailed-records.svg" alt="Detailed Records">
+
+                <h2 class="
+                font-semibold
+                text-neutral-900
+                text-2xl
+                py-8
+                ">Detailed Records</h2>
+
+                <p class="text-neutral-500 max-w-[40ch]">Gain insights into who is clicking your links. Knowing when and where 
+                  people engage with your content helps inform better decisions.</p>
+
+              </div>
+
+              <!-- box3 -->
+              <div class="
+              relative
+              bg-white
+              rounded-md
+              px-4   
+              py-8
+              flex
+              flex-col
+              items-center
+              text-center
+              transition-all
+              hover:scale-105
+              lg:mt-[6rem]
+              ">
+                <img class="
+                absolute
+                -top-10
+                lg:left-12
+                bg-primary-violet
+                rounded-full
+                p-4
+                " src="/images/icon-fully-customizable.svg" alt="Fully customizable">
+
+                <h2 class="
+                font-semibold
+                text-neutral-900
+                text-2xl
+                py-4
+                ">Fully Customizable</h2>
+
+                <p class="text-neutral-500 max-w-[40ch]">Improve brand awareness and content discoverability through customizable 
+                  links, supercharging audience engagement.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- * section 4 -->
+        <section role="boostLink">
+
+          <h1 class="sr-only text-center">Boost Link</h1>
+
+          <div class="
+          flex
+          flex-col
+          bg-primary-violet
+          ">
+
+            <div class="
+            flex
+            flex-col
+            items-center
+            p-12
+            gap-6
+            bg-no-repeat
+            bg-cover
+            " style="background-image: url('/images/bg-boost-desktop.svg');">
+
+              <h1 class="
+              text-center
+              text-white
+              text-2xl
+              lg:text-4xl
+              font-bold
+              ">Boost your links today</h1>
+
+              <a class="
+              text-xl
+              lg:text-xl
+              text-white
+              bg-primary-cyan
+              px-12
+              py-2
+              rounded-full
+              hover:text-primary-cyan
+              hover:bg-white
+              hover:shadow-lg
+              transition-all
+              " href="/">Get Started</a>
+
+            </div>
+          </div>
+        </section>
+
+        <footer>
+        <!-- * section 5 -->
+        <section role="footer">
+
+          <h1 class="sr-only text-center">Footer</h1>
+
+          <div class="
+          bg-neutral-900
+          flex
+          flex-col
+          gap-4
+          items-center
+          lg:flex-row
+          lg:items-start
+          lg:justify-evenly
+          p-8
+          ">
+
+            <!-- logo div -->
+            <div class="
+            flex 
+            flex-1 
+            flex-col 
+            items-start 
+            p-4
+            ">
+              <a href="/"><img src="/images/logo.svg" alt="Logo"></a>
+            </div>
+
+            <!-- links -->
+            <div class="
+            flex
+            flex-2
+            flex-col
+            items-center
+            gap-12
+            p-4
+            lg:flex-row
+            lg:items-start
+            lg:justify-evenly
+            ">
+
+              <!-- features div -->
+              <div class="">
+                <ul class="
+                flex 
+                flex-col 
+                items-center 
+                text-center
+                gap-4
+                text-neutral-300
+                lg:items-start
+                ">
+                  <li class="
+                  text-xl
+                  text-white
+                  lg:text-2xl
+                  ">Features</li>
+                  <li class="hover:text-primary-cyan"><a href="/">Link Shortening</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Branded Links</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Analytics</a></li>
+                </ul>
+              </div>
+
+              <!-- resources div -->
+              <div class="">
+                <ul class="
+                flex 
+                flex-col 
+                items-center 
+                text-center
+                gap-4
+                text-neutral-300
+                lg:items-start
+                
+                ">
+                  <li class="
+                  text-xl
+                  text-white
+                  lg:text-2xl
+                  ">Resources</li>
+                  <li class="hover:text-primary-cyan"><a href="/">Blog</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Developer</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Support</a></li>
+                </ul>
+              </div>
+
+              <!-- comapny div -->
+              <div class="">
+                <ul class="
+                flex 
+                flex-col 
+                items-center 
+                text-center
+                gap-4
+                text-neutral-300
+                lg:items-start
+                ">
+                  <li class="
+                  text-xl
+                  lg:text-2xl
+                  text-white
+                  ">Company</li>
+                  <li class="hover:text-primary-cyan"><a href="/">About</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Our Teams</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Careers</a></li>
+                  <li class="hover:text-primary-cyan"><a href="/">Support</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- social links -->
+            <div class="
+            flex 
+            justify-center 
+            flex-1 
+            gap-8
+            p-4
+            ">
+              <a href=""><img src="/images/icon-facebook.svg" alt="Facebook"></a>
+              <a href=""><img src="/images/icon-twitter.svg" alt="Twitter"></a>
+              <a href=""><img src="/images/icon-pinterest.svg" alt="Pinerest"></a>
+              <a href=""><img src="/images/icon-instagram.svg" alt="Instagram"></a>
+            </div>
+
+          </div>
+        </section>
+        </footer>
+
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
