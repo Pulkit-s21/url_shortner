@@ -233,10 +233,10 @@
           flex-col 
           ">
 
-            <div class="
+            <form id="form" class="
             flex
             flex-col
-            gap-4
+            gap-8
             lg:gap-8
             lg:flex-row
             lg:justify-evenly
@@ -244,8 +244,8 @@
             rounded-lg
             p-8
             ">
-
-              <input type="url" class="
+          
+              <input id="input" type="url" class="
               flex
               flex-1
               text-primary-cyan
@@ -253,24 +253,34 @@
               rounded-lg
               lg:text-lg
               placeholder-neutral-300
-              " placeholder="Shorten a link here...">
+              " placeholder="Shorten a link here..." required>
 
-              <a class="
-              p-4
-              px-8
-              text-center
-              bg-primary-cyan
-              text-white
-              font-normal
-              text-lg
-              rounded-md
-              hover:opacity-80
-              transition-opacity
-              " href="/">Shorten it!</a>
+                <a id="btn" class="
+                p-4
+                px-8
+                text-center
+                bg-primary-cyan
+                text-white
+                font-normal
+                text-lg
+                rounded-md
+                hover:text-primary-cyan
+                hover:bg-white
+                transition-all
+                " href="/">Shorten it!</a>
 
-            </div>
+            </form>
 
           </div>
+
+          <!-- div where the shortened url are shown -->
+          <div class="
+          result
+          flex
+          flex-col
+          text-xl
+          lg:text-2xl
+          "></div>
         </section>
 
         <!-- * section 3 -->
@@ -300,6 +310,8 @@
               <h2 class="
               text-center
               text-4xl
+              md:text-5xl
+              lg:text-6xl
               font-bold
               ">Advance Statistics</h2>
               

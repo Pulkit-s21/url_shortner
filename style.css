@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.result .item{
+    padding: .75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fff;
+    margin-inline: auto;
+    gap: 2rem;
+}
+
+.newUrl-btn{
+    padding: .5rem 1rem;
+    border: .2rem;
+    border-radius: 10%;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgb(13, 189, 130);
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
