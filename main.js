@@ -51,6 +51,7 @@ async function shortenUrl(url){
         `
             <p>${data.result.short_link}</p> 
             <button class="newUrl-btn">Copy</button>
+            <button class="delete-btn">Delete</button>
         `
         // result is the div alrdy created in HTML
             result.prepend(newUrl);
@@ -59,7 +60,17 @@ async function shortenUrl(url){
                 // here we are selecting the new short url beside the copy btn..this is one of copying the text in js
                 navigator.clipboard.writeText(copyBtn.previousElementSibling.textContent);
                 copyBtn.innerHTML = "Copied";
-                copyBtn.style.backgroundColor = "red";
+                copyBtn.style.backgroundColor = "blue";
+            });
+
+        // deleting the div if user doesnt want it anymore on the screen
+            const deleteBtn = document.querySelector('.delete-btn');
+            deleteBtn.classList.add(".delete-btn");
+            deleteBtn.addEventListener("click",(e) => {
+                // here we are selecting the new short url beside the copy btn..this is one of copying the text in js
+                deleteBtn.classList.add(".delete-animation");
+                newUrl.remove();
+                deleteBtn.style.backgroundColor = "red";
             });
             // making the input box empty once the function runs perfectly for nxt use case
             text.value = "";
