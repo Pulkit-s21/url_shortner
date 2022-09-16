@@ -50,8 +50,8 @@ async function shortenUrl(url){
         // data is the variable created above which stores the result given to us and we are assigning the result part and the short_link part inside the result of it
         `
             <p>${data.result.short_link}</p> 
-            <button class="newUrl-btn">Copy</button>
-            <button class="delete-btn">Delete</button>
+            <button class="newUrl-btn"><i class="fa-regular fa-copy"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
         `
         // result is the div alrdy created in HTML
             result.prepend(newUrl);
@@ -59,8 +59,8 @@ async function shortenUrl(url){
             copyBtn.addEventListener("click",() => {
                 // here we are selecting the new short url beside the copy btn..this is one of copying the text in js
                 navigator.clipboard.writeText(copyBtn.previousElementSibling.textContent);
-                copyBtn.innerHTML = "Copied";
-                copyBtn.style.backgroundColor = "blue";
+                copyBtn.innerHTML = `<i class="fa-solid fa-clipboard"></i>`;
+                copyBtn.style.backgroundColor = "#04cbd9";
             });
 
         // deleting the div if user doesnt want it anymore on the screen
@@ -68,9 +68,7 @@ async function shortenUrl(url){
             deleteBtn.classList.add(".delete-btn");
             deleteBtn.addEventListener("click",(e) => {
                 // here we are selecting the new short url beside the copy btn..this is one of copying the text in js
-                deleteBtn.classList.add(".delete-animation");
                 newUrl.remove();
-                deleteBtn.style.backgroundColor = "red";
             });
             // making the input box empty once the function runs perfectly for nxt use case
             text.value = "";
