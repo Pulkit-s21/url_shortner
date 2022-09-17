@@ -47,6 +47,7 @@ async function shortenUrl(url){
         const newUrl = document.createElement('div');
         newUrl.classList.add('item');
         newUrl.innerHTML = 
+        
         // data is the variable created above which stores the result given to us and we are assigning the result part and the short_link part inside the result of it
         `
             <p>${data.result.short_link}</p> 
@@ -55,7 +56,10 @@ async function shortenUrl(url){
         `
         // result is the div alrdy created in HTML
             result.prepend(newUrl);
+
+        // copy btn functioning
             const copyBtn = document.querySelector('.newUrl-btn');
+            copyBtn.style.backgroundColor = "#0dbd82";
             copyBtn.addEventListener("click",() => {
                 // here we are selecting the new short url beside the copy btn..this is one of copying the text in js
                 navigator.clipboard.writeText(copyBtn.previousElementSibling.textContent);
@@ -65,12 +69,12 @@ async function shortenUrl(url){
 
         // deleting the div if user doesnt want it anymore on the screen
             const deleteBtn = document.querySelector('.delete-btn');
-            deleteBtn.classList.add(".delete-btn");
+            deleteBtn.style.backgroundColor = "#fa2323";
             deleteBtn.addEventListener("click",(e) => {
-                // here we are selecting the new short url beside the copy btn..this is one of copying the text in js
                 newUrl.remove();
             });
-            // making the input box empty once the function runs perfectly for nxt use case
+
+        // making the input box empty once the function runs perfectly for nxt use case
             text.value = "";
 
     } catch (error) {
