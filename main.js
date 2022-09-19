@@ -70,7 +70,7 @@ async function shortenUrl(url){
         // deleting the div if user doesnt want it anymore on the screen
             const deleteBtn = document.querySelector('.delete-btn');
             deleteBtn.style.backgroundColor = "#fa2323";
-            deleteBtn.addEventListener("click",(e) => {
+            deleteBtn.addEventListener("click",() => {
                 newUrl.remove();
             });
 
