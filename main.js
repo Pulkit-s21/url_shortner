@@ -1,5 +1,6 @@
 import './style.css'
 import 'tw-elements';
+import anime from 'animejs/lib/anime.es.js';
 
 const openBtn = document.querySelector("#openMenu");
 const closeBtn = document.querySelector("#closeMenu");
@@ -81,3 +82,25 @@ async function shortenUrl(url){
         alert("Please enter a valid URL");
     }
 }
+
+anime({
+    targets: '.relative img',
+    rotate: {
+        value: 360,
+        duration: 1800,
+        easing: 'easeInOutSine'
+    },
+    scale: {
+        value: 1.1,
+        duration: 1000,
+        delay: 800,
+        easing: 'easeInOutQuart'
+    },
+    scale: {
+        value: 1,
+        duration: 1000,
+        delay: 800,
+        easing: 'easeInOutQuart'
+    },
+    delay: 250 // All properties except 'scale' inherit 250ms delay
+  });
