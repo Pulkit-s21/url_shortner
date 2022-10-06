@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
+    "howler": "^2.2.3",
+    "scrollmagic": "^2.0.8",
     "tw-elements": "^1.0.0-alpha12"
   }
 }

@@ -27,3 +27,7 @@
     outline: none;
     border: none;
 }
+
+.fade-in{
+    opacity: 1;
+}

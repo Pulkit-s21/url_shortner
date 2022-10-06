@@ -54,7 +54,6 @@
           </svg>          
         </button>
 
-
         <div class="
         bg-white
         hidden
@@ -77,6 +76,7 @@
         " role="menuBar">
         
         <a class="
+        link-1
         text-lg
         lg:text-xl
         border-b-2
@@ -89,6 +89,7 @@
         " href="/">Features</a>
         
         <a class="
+        link-2
         text-lg
         lg:text-xl
         border-b-2
@@ -101,6 +102,7 @@
         " href="/">Pricing</a>
         
         <a class="
+        link-3
         text-lg
         lg:text-xl
         border-b-2
@@ -114,6 +116,7 @@
         " href="/">Resources</a>
         
         <a class="
+        link-4
         text-lg
         lg:text-xl
         border-b-2
@@ -126,6 +129,7 @@
         " href="/">Login</a>
         
         <a class="
+        link-5
         text-lg
         lg:text-xl
         mx-4
@@ -182,6 +186,7 @@
               bg-clip-text
               text-center
               text-4xl
+              mt-12
               font-bold
               lg:text-6xl
               lg:max-w-[15ch]
@@ -249,6 +254,8 @@
             ">
           
               <input id="input" type="url" class="
+              urlInput | 
+              text-center
               flex
               flex-1
               text-primary-cyan
@@ -260,8 +267,10 @@
               " placeholder="Shorten a link here..." required>
 
                 <a id="btn" class="
+                shortBtn | 
                 p-4
                 px-8
+                md:px-24
                 text-center
                 bg-primary-cyan
                 text-white
@@ -288,14 +297,14 @@
         </section>
 
         <!-- * section 3 -->
-        <section role="stats">
+        <section role="stats" class="stats">
 
           <h1 class="sr-only text-center">Advance Stats</h1>
 
           <div class="
           bg-neutral-100
           p-6
-          py-8
+          py-12
           gap-4
           mx-auto
           flex
@@ -343,7 +352,9 @@
             ">
 
               <!-- box1 -->
-              <div class="
+              <div class=" 
+              box-1
+              opacity-0
               relative
               bg-white
               rounded-md
@@ -353,7 +364,8 @@
               flex-col
               items-center
               text-center
-              transition-all
+              transition-all 
+              duration-300
               hover:scale-105
               ">
 
@@ -380,6 +392,8 @@
 
               <!-- box2 -->
               <div class="
+              box-2
+              opacity-0
               relative
               bg-white
               rounded-md
@@ -389,7 +403,8 @@
               flex-col
               items-center
               text-center
-              transition-all
+              transition-all 
+              duration-300
               hover:scale-105
               lg:mt-[3rem]
               ">
@@ -416,6 +431,8 @@
 
               <!-- box3 -->
               <div class="
+              box-3
+              opacity-0
               relative
               bg-white
               rounded-md
@@ -425,7 +442,8 @@
               flex-col
               items-center
               text-center
-              transition-all
+              transition-all 
+              duration-300
               hover:scale-105
               lg:mt-[6rem]
               ">
@@ -471,7 +489,8 @@
             flex
             flex-col
             items-center
-            p-12
+            px-12
+            py-24
             gap-6
             bg-no-repeat
             bg-cover
@@ -637,5 +656,15 @@
     <script src="https://kit.fontawesome.com/4eaa959a81.js" crossorigin="anonymous"></script>
     <script type="module" src="/main.js"></script>
     <script src="anime.min.js"></script>
+
+    <!-- scrollMagic -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>
